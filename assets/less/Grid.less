@@ -1,0 +1,52 @@
+.container,
+.container-fluid {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	overflow-x: hidden;
+
+	&:not(:last-child) { margin-bottom: 50px; }
+
+	&--vue { overflow-x: visible; }
+}
+
+@media (min-width: 688px) {
+	.container {
+		max-width: 688px;
+	}
+}
+
+@media (min-width: 940px) {
+	.container {
+		max-width: 940px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		max-width: 988px;
+	}
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row > * {
+	--bs-gutter-x: 15px;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 100%;
+	padding-right: var(--bs-gutter-x);
+	padding-left: var(--bs-gutter-x);
+
+	// @media (min-width: 688px) { --bs-gutter-x: 40px; }
+	// @media (min-width: 940px) { --bs-gutter-x: 42px; }
+	// @media (min-width: 1024px) { --bs-gutter-x: 40px; }
+}
+
+.col {
+	flex: 1 0 0%;
+}

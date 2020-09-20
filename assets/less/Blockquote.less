@@ -1,0 +1,68 @@
+.blockquote {
+	max-width: 100%;
+	width: 570px;
+	margin: 0;
+	position: relative;
+
+	@media screen and (max-width: 1024px) { width: 540px; }
+	@media screen and (max-width: 940px) { width: 610px; }
+	@media screen and (max-width: 688px) { width: 100%; }
+
+	&:not(:last-child) {
+		margin-bottom: 50px;
+
+		@media screen and (max-width: 688px) { margin-bottom: 40px; }
+	}
+
+	&:before {
+		content: '';
+		width: 19px;
+		height: 14px;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxOSAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMTRWOS40MTE3N0g3VjE0SDFaIiBmaWxsPSIjMDE1NzZDIi8+CjxwYXRoIGQ9Ik0xIDkuNDExNzdWMTRIN1Y5LjQxMTc3SDFaTTEgOS40MTE3N0w1LjUgMSIgc3Ryb2tlPSIjMDE1NzZDIiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTEyIDE0VjkuNDExNzdIMThWMTRIMTJaIiBmaWxsPSIjMDE1NzZDIi8+CjxwYXRoIGQ9Ik0xMiA5LjQxMTc3TDExLjExODIgOC45NDAwNkwxMSA5LjE2MTA5VjkuNDExNzdIMTJaTTEyIDE0SDExVjE1SDEyVjE0Wk0xOCAxNFYxNUgxOVYxNEgxOFpNMTggOS40MTE3N0gxOVY4LjQxMTc3SDE4VjkuNDExNzdaTTExIDkuNDExNzdWMTRIMTNWOS40MTE3N0gxMVpNMTIgMTVIMThWMTNIMTJWMTVaTTE5IDE0VjkuNDExNzdIMTdWMTRIMTlaTTE4IDguNDExNzdIMTJWMTAuNDExOEgxOFY4LjQxMTc3Wk0xMi44ODE4IDkuODgzNDdMMTcuMzgxOCAxLjQ3MTcxTDE1LjYxODIgMC41MjgyOTJMMTEuMTE4MiA4Ljk0MDA2TDEyLjg4MTggOS44ODM0N1oiIGZpbGw9IiMwMTU3NkMiLz4KPC9zdmc+Cg==");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&_body {
+		max-width: 100%;
+		padding-top: 7px;
+		padding-left: 37px;
+		padding-bottom: 25px;
+
+		p {
+			max-width: 100%;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 25px;
+			letter-spacing: -0.01em;
+			margin: 0;
+		}
+	}
+
+	&_name {
+		max-width: 100%;
+		padding-left: 37px;
+
+		p {
+			max-width: 100%;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 25px;
+			letter-spacing: -0.01em;
+			padding-bottom: 5px;
+			margin: 0;
+		}
+
+		span {
+			max-width: 100%;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 18px;
+			letter-spacing: -0.02em;
+		}
+	}
+}

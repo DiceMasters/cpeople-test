@@ -1,0 +1,18 @@
+.header {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    padding: 40px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: top .3s;
+    z-index: 5;
+
+    @media screen and (max-width: 1024px) { padding: 30px 0; }
+    @media screen and (max-width: 688px) { padding: 15px 0; }
+
+    &_lang {
+        @media screen and (max-width: 688px) { display: none; }
+    }
+}

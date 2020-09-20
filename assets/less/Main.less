@@ -1,0 +1,24 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 90px;
+    padding-bottom: 100px;
+
+    @media screen and (max-width: 1024px) { padding-top: 80px; }
+    @media screen and (max-width: 688px) { padding-top: 30px; }
+
+    &_section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        &:not(:last-child) {
+            padding-bottom: 120px;
+
+            @media screen and (max-width: 688px) { padding-bottom: 80px; }
+        }
+    }
+}

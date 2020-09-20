@@ -1,0 +1,66 @@
+.button {
+	&_round {
+		width: 60px;
+		height: 60px;
+		background-color: rgba(1, 87, 108, .4);
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		font-family: @ff;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 24px;
+		letter-spacing: 0.01em;
+		color: white;
+		border: none;
+		border-radius: 50%;
+		transition: opacity .3s;
+		cursor: pointer;
+
+		&:hover, &:focus { opacity: .75; }
+
+		&.button_small {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	/**
+	 * Colors
+	 */
+	&_pink {
+		background-color: #FF6C6C;
+	}
+
+	&_dark {
+		background-color: #01576C;
+	}
+
+	/**
+	 * Types
+	 */
+	&_burger {
+		svg { height: 100%; }
+		rect { transition: transform .3s; }
+
+		&:hover, &:focus {
+			rect {
+				&:first-child { transform: translateY(-3px) }
+				&:nth-child(2) { transform: translateY(3px) }
+			}
+		}
+	}
+
+	/**
+	 * Container's
+	 */
+	&_group {
+		display: flex;
+		align-items: center;
+
+		.button, .button_round {
+			&:not(:last-child) { margin-right: 30px; }
+		}
+	}
+}
