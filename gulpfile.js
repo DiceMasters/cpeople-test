@@ -63,3 +63,30 @@ gulp.task('html', function(done) {
 })
 
 gulp.task('default', gulp.parallel('less', 'html', 'serve'))
+
+gulp.task('buildHTML', function(done) {
+	gulp.src('*.html')
+		.pipe( gulpReplace('/assets', 'assets'))
+		.pipe( gulp.dest('dist/'))
+
+	done()
+})
+
+gulp.task('copyDirectory', function(done) {
+	gulp.src(['assets/css/**/*'])
+		.pipe( gulp.dest('dist/assets/css/'))
+
+	gulp.src(['assets/fonts/**/*'])
+		.pipe( gulp.dest('dist/assets/fonts/'))
+
+	gulp.src(['assets/images/**/*'])
+		.pipe( gulp.dest('dist/assets/images/'))
+
+	gulp.src(['assets/js/**/*'])
+		.pipe( gulp.dest('dist/assets/js/'))
+
+	gulp.src(['assets/vendor/**/*'])
+		.pipe( gulp.dest('dist/assets/vendor/'))
+
+	done()
+})
